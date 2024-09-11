@@ -1,0 +1,378 @@
+{
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "spWiuL71FJY-"
+      },
+      "outputs": [],
+      "source": [
+        "# 1. What is the difference between a function and a method in Python?\n",
+        "\n",
+        "#In Python, the terms \"function\" and \"method\" both refer to callable objects that execute code, but they have different contexts and usages:\n",
+        "\n",
+        "#Function:is a block of reusable code that performs a specific task. Functions can be defined using the def keyword and can be called independently.\n",
+        "# method is a function that is associated with an object or class. Methods are defined inside a class and are called on instances of that class"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bZZMxS0HGcu4",
+        "outputId": "1d7deb04-28cd-4d55-d89d-44bf12c6d20a"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "7"
+            ]
+          },
+          "execution_count": 10,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "class Calculator:\n",
+        "    def add(self, a, b):\n",
+        "        return a + b\n",
+        "\n",
+        "calc = Calculator()\n",
+        "calc.add(3, 4)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "K0jLecwTF_ML",
+        "outputId": "ce8a8fe2-e31c-446d-9bf0-2327c325040e"
+      },
+      "outputs": [
+        {
+          "data": {
+            "text/plain": [
+              "7"
+            ]
+          },
+          "execution_count": 11,
+          "metadata": {},
+          "output_type": "execute_result"
+        }
+      ],
+      "source": [
+        "def add(a, b):\n",
+        "    return a + b\n",
+        "add(3, 4)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "hWLuYwrAGuG5"
+      },
+      "outputs": [],
+      "source": [
+        "#2. Explain the concept of function arguments and parameters in Python.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "xGci-kBVGuk_"
+      },
+      "outputs": [],
+      "source": [
+        "#Parameters are the names listed in the function definition. They act as placeholders for the values that will be passed into the function.They define what kind of input the function expect\n",
+        "#Arguments are the actual values or expressions passed to the function when it is called. These values are assigned to the corresponding parameters in the function.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W9nizOMcMU5i",
+        "outputId": "71b58428-8186-4f0a-bfdc-6ed523f29a43"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "hello , Riddha\n"
+          ]
+        }
+      ],
+      "source": [
+        "def greet(name):\n",
+        "  print(f\"hello , {name }\")\n",
+        "greet (\"Riddha\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vQCwUZkrNAnK",
+        "outputId": "c9141a8e-10df-4f2e-ba82-58577279f2a9"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "hello , Alice\n"
+          ]
+        }
+      ],
+      "source": [
+        "greet(\"Alice\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "Ckf7L0RW7GNK"
+      },
+      "outputs": [],
+      "source": [
+        "#3. What are the different ways to define and call a function in Python?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "RWOkPD4b7HFy"
+      },
+      "outputs": [],
+      "source": [
+        "#Standard Function Definition and Call:\n",
+        "\n",
+        "def my_function(param1, param2):\n",
+        "    return param1 + param2\n",
+        "    result= my_function(5, 3)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "z0uEBqAL9Lap"
+      },
+      "outputs": [],
+      "source": [
+        "#2. Function with Parameters"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "background_save": true
+        },
+        "id": "4uEnF0AT9Lxy",
+        "outputId": "a1c9a91a-657a-4452-8aef-2583eb583d84"
+      },
+      "outputs": [
+        {
+          "ename": "IndentationError",
+          "evalue": "unindent does not match any outer indentation level (<tokenize>, line 3)",
+          "output_type": "error",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<tokenize>\"\u001b[0;36m, line \u001b[0;32m3\u001b[0m\n\u001b[0;31m    greet(\"Alice\")\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m unindent does not match any outer indentation level\n"
+          ]
+        }
+      ],
+      "source": [
+        "def greet(name):\n",
+        "      print(f\"Hello, {name}!\")\n",
+        "      greet(\"Alice\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#8. What is a lambda function in Python and when is it typically used?"
+      ],
+      "metadata": {
+        "id": "DgrjYDr_PlVj"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#A lambda function in Python is a small, anonymous function defined with the lambda keyword. Unlike regular functions defined using def, lambda functions are meant for short-term, simple tasks and are generally used for cases where a full function definition might be overkill.\n",
+        "\n",
+        "add = lambda x, y: x + y\n",
+        "\n",
+        "print(add(5, 3))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wEN1V5GSPlsr",
+        "outputId": "701338ee-e5ed-47ee-8e66-96bc3c4d8a8d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "8\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#9. Explain the purpose and usage of the `map()` function in Python.\n",
+        "#The map() function in Python is a built-in function used for applying a given function to each item in an iterable (such as a list, tuple, or set) and returning an iterator that produces the results. It is a useful tool for transforming data in a concise and functional programming style. Purpose of map()he primary purpose of the map() function is to perform a transformation on each element of an iterable and return a new iterable containing the results. This can simplify code that would otherwise require a loop.\n"
+      ],
+      "metadata": {
+        "id": "YhGufRAzP6gU"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def square(x):\n",
+        "      return x ** 2\n",
+        "numbers = [1, 2, 3, 4]\n",
+        "squared_numbers = map(square, numbers)\n",
+        "print(list(squared_numbers))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3OQFIRFmP6rO",
+        "outputId": "8d90a495-ff6f-4a83-e3f0-1c271da2e6cb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 4, 9, 16]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#10. What is the difference between `map()`, `reduce()`, and `filter()` functions in Python?"
+      ],
+      "metadata": {
+        "id": "q5jJjxuSQqkd"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#map() applies a given function to each item in an iterable and returns an iterator of the results. Typically used to transform each element of an iterable based on a function\n",
+        "\n",
+        "def square(x):\n",
+        "      return x ** 2\n",
+        "\n",
+        "numbers = [1, 2, 3, 4]\n",
+        "squared_numbers = map(square, numbers)\n",
+        "print(list(squared_numbers))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ktaTj_pjQqwT",
+        "outputId": "b7fdcc33-e7bd-4c20-f925-0a1588ce6bb6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 4, 9, 16]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#reduce() applies a function cumulatively to the items of an iterable, from left to right, reducing the iterable to a single accumulated result.. Typically used for aggregating or accumulating values based on a binary function.\n",
+        "\n",
+        "from functools import reduce\n",
+        "\n",
+        "def add(x, y):\n",
+        "    return x + y\n",
+        "\n",
+        "numbers = [1, 2, 3, 4]\n",
+        "result = reduce(add, numbers)\n",
+        "print(result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cKxdv4WNRRwG",
+        "outputId": "10035ecf-08e8-48ff-bec2-b34caeb04b31"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
